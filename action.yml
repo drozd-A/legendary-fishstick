@@ -19,7 +19,7 @@ runs:
       working-directory: ${{ inputs.working-directory }}
       env:
         CACHE_DIRECTORY: .cache/node/corepack/v1
-        CACHE_REPOSITORY: ${{ inputs.cache-repository || format('{0}/../{1}', github.action_repository || github.repository, 'legendary-fishstick')}}
+        CACHE_REPOSITORY: ${{ inputs.cache-repository || format('{0}/../{1}', github.action_repository || github.repository, 'blob')}}
       run: |
         : Get package manager
         if [ -n "$TRACE" ]; then
